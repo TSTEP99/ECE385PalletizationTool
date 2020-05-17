@@ -12,7 +12,8 @@ from PIL import Image
 old_file=input('What is the png you want to palletize (drop the .png): ')
 new_file_name=input('Where do you want to save the modified image(drop the .png)?: ')
 palletized_txt_name=input('Where do you want to save the palletized labels(drop the file extension): ')
-pallete_file=input('Where do you want to save the pallete(drop the file extension)?')
+pallete_file=input('Where do you want to save the pallete(drop the file extension)?: ')
+color_number=int(input('How many colors do you want?: '))
 
 im=Image.open(old_file+'.png')
 im.convert('RGBA')
@@ -26,7 +27,7 @@ for x in range(im.size[0]):
 
 #Performs KMeans Clustering
 print('Doing KMeans Clustering...')
-kmean=cluster.KMeans(n_clusters=8).fit(list_)
+kmean=cluster.KMeans(n_clusters=color_number).fit(list_)
 print('...Finished KMeans Clustering')
 
 #Make a new image and file to save the picture and file
