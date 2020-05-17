@@ -1,4 +1,4 @@
-# Author: Teja Gupta
+# Author: Teja Gupta, Aditya Gupta
 # palletizer.py
 # This is a pallete based approach to reduce the size of sprite sheets using kmeans clustering
 #
@@ -36,7 +36,7 @@ print('...Finished KMeans Clustering')
 
 # Make a new image and file to save the picture and file
 new_image = Image.new('RGB', im.size, color='white')
-new_file= open(new_file_name+'.txt','w')
+new_file= open(palletized_txt_name+'.txt','w')
 
 # Gets the labels and cluster centers (which become the pallete)
 labels=np.array(kmean.labels_)
