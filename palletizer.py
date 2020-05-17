@@ -34,8 +34,10 @@ print('Doing KMeans Clustering...')
 kmean=cluster.KMeans(n_clusters=color_number).fit(list_)
 print('...Finished KMeans Clustering')
 
-# Make a new image and file to save the picture and file
+# Make a new image and file to save the picture
 new_image = Image.new('RGB', im.size, color='white')
+
+# Make a new file to save the indices into the palette
 new_file= open(palletized_txt_name+'.txt','w')
 
 # Gets the labels and cluster centers (which become the pallete)
