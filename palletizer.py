@@ -55,6 +55,6 @@ new_image.save(new_file_name+'.png')
 # Saves the cluster centers as the pallete
 new_pallete=open(pallete_file+'.txt','w')
 for i in range(len(centers)):
-	new_pallete.write(('%02x%02x%02x\n')%(centers[i][0],centers[i][1],centers[i][2]))
+	new_pallete.write(('0x%02x%02x%02x\n')%(centers[i][0],centers[i][1],centers[i][2]))
 
 new_pallete.close()
